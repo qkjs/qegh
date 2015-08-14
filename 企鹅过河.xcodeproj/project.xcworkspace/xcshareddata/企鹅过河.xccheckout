@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>88625AB2-67ED-4484-AC67-DCB6697C7EA7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>企鹅过河</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4F9B9F3A1ADE4AC951CB84000103BB646E73F04E</key>
+		<string>ssh://github.com/qkjs/qegh.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>企鹅过河.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4F9B9F3A1ADE4AC951CB84000103BB646E73F04E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/qkjs/qegh.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4F9B9F3A1ADE4AC951CB84000103BB646E73F04E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4F9B9F3A1ADE4AC951CB84000103BB646E73F04E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>qegh</string>
+		</dict>
+	</array>
+</dict>
+</plist>

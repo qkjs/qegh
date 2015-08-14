@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x4f01;&#x9e45;&#x8fc7;&#x6cb3;/ViewController.m"
+            timestampString = "461167897.958693"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-zxSeaView"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x4f01;&#x9e45;&#x8fc7;&#x6cb3;/ViewController.m"
+            timestampString = "461168351.306587"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "278"
+            endingLineNumber = "278"
+            landmarkName = "-zxWin"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ViewController zxWin]"
+                  moduleName = "&#x4f01;&#x9e45;&#x8fc7;&#x6cb3;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bernie/%E6%96%87%E6%A1%A3/Xcode/Project/%E4%BC%81%E9%B9%85%E8%BF%87%E6%B2%B3/%E4%BC%81%E9%B9%85%E8%BF%87%E6%B2%B3/ViewController.m"
+                  timestampString = "461166904.689756"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "292"
+                  endingLineNumber = "292"
+                  offsetFromSymbolStart = "532">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__23-[ViewController zxWin]_block_invoke"
+                  moduleName = "&#x4f01;&#x9e45;&#x8fc7;&#x6cb3;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bernie/%E6%96%87%E6%A1%A3/Xcode/Project/%E4%BC%81%E9%B9%85%E8%BF%87%E6%B2%B3/%E4%BC%81%E9%B9%85%E8%BF%87%E6%B2%B3/ViewController.m"
+                  timestampString = "461166904.689908"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "294"
+                  endingLineNumber = "294"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x4f01;&#x9e45;&#x8fc7;&#x6cb3;/ViewController.m"
+            timestampString = "461168085.861845"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "-zxCenterView"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
