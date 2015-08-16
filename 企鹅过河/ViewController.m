@@ -40,7 +40,7 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad{
 
     [super viewDidLoad];
     [self zxSkyView];
@@ -49,16 +49,15 @@
     [self reSetIconFream];
     [self zxRePlayButton];
     [self zxScoreLab];
-    
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
 }
 
 #pragma mark -lasyload
 
-- (UIView *) zxSkyView {
+- (UIView *) zxSkyView{
     if (!_zxSkyView) {
         _zxSkyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenW, screenH/3 * 2)];
         _zxSkyView.backgroundColor = [UIColor clearColor];
@@ -67,7 +66,7 @@
     return _zxSkyView;
 }
 
-- (UIView *) zxSeaView {
+- (UIView *) zxSeaView{
     if (!_zxSeaView) {
         _zxSeaView = [[UIView alloc] initWithFrame:CGRectMake(0, screenH/3 * 2, screenW, screenH/3)];
         _zxSeaView.backgroundColor = [UIColor cyanColor];
@@ -76,7 +75,7 @@
     return _zxSkyView;
 }
 
-- (UIView *) zxLeftView {
+- (UIView *) zxLeftView{
     if (!_zxLeftView) {
         _zxLeftView = [[UIView alloc] initWithFrame:CGRectMake(0, screenH/3 * 2 - leftViewLocalX, leftViewLocalX, screenH -  (leftViewLocalY))];
         _zxLeftView.backgroundColor = viewColor;
@@ -85,7 +84,7 @@
     return _zxLeftView;
 }
 
-- (UIView *) zxCenterView {
+- (UIView *) zxCenterView{
     if (!_zxCenterView) {
         _zxCenterView = [[UIView alloc] initWithFrame:[self zxInitTheView]];
         _zxCenterView.backgroundColor = viewColor;
@@ -95,7 +94,7 @@
     return _zxCenterView;
 }
 
-- (UIView *) zxRightView {
+- (UIView *) zxRightView{
     if (!_zxRightView) {
         
         _zxRightView = [[UIView alloc] init];
@@ -108,7 +107,7 @@
     return _zxRightView;
 }
 
-- (UIView *) zxWoodView {
+- (UIView *) zxWoodView{
     if (!_zxWoodView) {
         
         _zxWoodView = [[UIView alloc] init];
@@ -216,6 +215,15 @@
     self.zxWoodView.frame = CGRectMake(x, y, w, h);
 }
 
+- (void) reSetIconFream{
+    CGFloat iconW = 18;
+    CGFloat iconH = 18;
+    CGFloat iconX = leftViewLocalX - iconW - 1;
+    CGFloat iconY = leftViewLocalY- iconH ;
+    
+    self.zxIcon.frame = CGRectMake(iconX, iconY, iconW, iconH);
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     if (self.touchEnabled) {
         [self zxInitWood];
@@ -234,15 +242,6 @@
         }];
         [self zxJudge];
     }
-}
-
-- (void) reSetIconFream{
-    CGFloat iconW = 18;
-    CGFloat iconH = 18;
-    CGFloat iconX = leftViewLocalX - iconW - 1;
-    CGFloat iconY = leftViewLocalY- iconH ;
-    
-    self.zxIcon.frame = CGRectMake(iconX, iconY, iconW, iconH);
 }
 
 #pragma mark - 判断胜负
@@ -308,11 +307,9 @@
             self.zxRePlayButton.enabled = YES;
         }];
     }];
-
 }
 
 - (void) zxLost{
-
     
     CGRect iconOldFream = self.zxIcon.frame;
     CGFloat iconX = CGRectGetMaxX(self.zxWoodView.frame);
@@ -328,10 +325,9 @@
             self.zxWoodView.transform = CGAffineTransformRotate(self.zxWoodView.transform, M_PI * 0.5);
         } completion:^(BOOL finished) {
             [self.zxRePlayButton setHidden:NO];
-            self.zxScoreLab.text = @"一个不小心,我们可怜的小企鹅又掉下去了。点击开始，挽救我们的小企鹅!";
+            self.zxScoreLab.text =[NSString  stringWithFormat:@"一个不小心, 我们的小企鹅永远的停留在了第%@关。点击开始，挽救我们的小企鹅!", self.zxScoreLab.text];
         }];
     }];
-
 }
 
 @end
