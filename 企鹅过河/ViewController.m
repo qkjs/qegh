@@ -27,7 +27,9 @@
 @property (nonatomic, strong) UIImageView *zxIcon;
 @property (nonatomic, strong) UIView *zxWoodView;
 @property (nonatomic, strong) CADisplayLink *zxTimer;
+
 @property (nonatomic, assign) BOOL touchEnabled;
+@property (nonatomic, assign) NSInteger zxFinger;
 
 
 
@@ -167,6 +169,7 @@
     [self.zxRePlayButton setHidden:YES];
     self.zxScoreLab.text = @"0";
 
+    self.zxFinger = 0;
     [self zxInitWood];
     [self zxLeftView];
     [self zxCenterView];
@@ -225,7 +228,10 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    if (self.touchEnabled) {
+    
+    self.zxFinger = self.zxFinger + 1;
+    NSLog(@"%ld", (long)self.zxFinger);
+    if (self.touchEnabled && self.zxFinger == 1) {
         [self zxInitWood];
         self.zxTimer = [CADisplayLink displayLinkWithTarget:self selector:@selector(zxWoodChangeToLong)];
         [self.zxTimer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
@@ -233,7 +239,9 @@
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    if (self.touchEnabled) {
+    
+    self.zxFinger --;
+    if (self.touchEnabled && self.zxFinger == 0) {
         self.touchEnabled = NO;
         [self.zxTimer invalidate];
         
