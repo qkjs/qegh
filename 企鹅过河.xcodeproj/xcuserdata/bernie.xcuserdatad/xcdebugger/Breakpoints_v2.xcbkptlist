@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x4f01;&#x9e45;&#x8fc7;&#x6cb3;/ViewController.m"
-            timestampString = "461948634.280512"
+            timestampString = "461950364.990883"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x4f01;&#x9e45;&#x8fc7;&#x6cb3;/ViewController.m"
-            timestampString = "461949043.741784"
+            timestampString = "461950394.539238"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "301"
-            endingLineNumber = "301"
-            landmarkName = "-zxWin"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "-zxInitTheView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

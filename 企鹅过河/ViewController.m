@@ -216,12 +216,21 @@
 - (void) zxWoodChangeToLong{
     CGFloat changeWood = 0.8;
     
+    CGFloat offSiteH = screenW - 40;
+    
     CGFloat x = self.zxWoodView.frame.origin.x;
     CGFloat y = self.zxWoodView.frame.origin.y - changeWood;
     CGFloat w = self.zxWoodView.frame.size.width;
     CGFloat h = self.zxWoodView.frame.size.height + changeWood;
     
+    if (h > offSiteH){
+        h = h - offSiteH + 4;
+        y =  viewY - 4;
+    }
+    
+    
     self.zxWoodView.frame = CGRectMake(x, y, w, h);
+    
 }
 
 - (void) reSetIconFream{
