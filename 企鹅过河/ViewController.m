@@ -30,19 +30,21 @@
 
 @property (nonatomic, assign) BOOL touchEnabled;
 @property (nonatomic, assign) NSInteger zxFinger;
-
-
+@property (nonatomic, strong) UINavigationController *zxNav;
 
 #pragma mark - 几个重要的点
 #pragma mark
+
 #define leftViewLocalX 40
-#define leftViewLocalY screenH/3 * 2 - 40
+#define viewY (screenW + 64 - 40)
+#define leftViewLocalY viewY - 40
 
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad{
+    
 
     [super viewDidLoad];
     [self zxSkyView];
@@ -51,6 +53,9 @@
     [self reSetIconFream];
     [self zxRePlayButton];
     [self zxScoreLab];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning{
@@ -61,7 +66,7 @@
 
 - (UIView *) zxSkyView{
     if (!_zxSkyView) {
-        _zxSkyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenW, screenH/3 * 2)];
+        _zxSkyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenW, viewY + 20)];
         _zxSkyView.backgroundColor = [UIColor clearColor];
         [self.view addSubview:_zxSkyView];
     }
@@ -70,7 +75,8 @@
 
 - (UIView *) zxSeaView{
     if (!_zxSeaView) {
-        _zxSeaView = [[UIView alloc] initWithFrame:CGRectMake(0, screenH/3 * 2, screenW, screenH/3)];
+        _zxSeaView = [[UIView alloc] initWithFrame:CGRectMake(0, viewY, screenW, (screenH - viewY))];
+        _zxSeaView.center = CGPointMake(_zxSeaView.center.x, _zxSeaView.center.y + 20);
         _zxSeaView.backgroundColor = [UIColor cyanColor];
         [self.view addSubview:_zxSeaView];
     }
@@ -79,7 +85,7 @@
 
 - (UIView *) zxLeftView{
     if (!_zxLeftView) {
-        _zxLeftView = [[UIView alloc] initWithFrame:CGRectMake(0, screenH/3 * 2 - leftViewLocalX, leftViewLocalX, screenH -  (leftViewLocalY))];
+        _zxLeftView = [[UIView alloc] initWithFrame:CGRectMake(0, viewY, leftViewLocalX, screenH -  (leftViewLocalY))];
         _zxLeftView.backgroundColor = viewColor;
         [self.view addSubview:_zxLeftView];
     }
@@ -182,7 +188,7 @@
     
     CGFloat woodW = 4.0;
     CGFloat woodH = 4.0;
-    CGFloat woodY = leftViewLocalY - woodH;
+    CGFloat woodY = viewY - woodH;
     CGFloat woodX = leftViewLocalX ;
     
     self.zxWoodView.frame = CGRectMake(woodX, woodY, woodW, woodH);
@@ -200,7 +206,7 @@
     NSInteger cX = screenW - leftViewLocalX - 20 - w;
     NSInteger x = (arc4random() % cX) + leftViewLocalX + 20;
     
-    CGFloat y = leftViewLocalY;
+    CGFloat y = viewY;
     CGFloat h = screenH -  (leftViewLocalY);
     
     return  CGRectMake(x, y, w, h);
@@ -222,7 +228,7 @@
     CGFloat iconW = 18;
     CGFloat iconH = 18;
     CGFloat iconX = leftViewLocalX - iconW - 1;
-    CGFloat iconY = leftViewLocalY- iconH ;
+    CGFloat iconY = viewY- iconH ;
     
     self.zxIcon.frame = CGRectMake(iconX, iconY, iconW, iconH);
 }
@@ -293,7 +299,7 @@
         [UIView animateWithDuration:1 animations:^{
             self.zxLeftView.frame = CGRectMake(- self.zxLeftView.frame.size.width, self.zxLeftView.frame.origin.y, self.zxLeftView.bounds.size.width, self.zxLeftView.bounds.size.height);
             
-            self.zxCenterView.frame = CGRectMake(leftViewLocalX - self.zxCenterView.bounds.size.width, leftViewLocalY, self.zxCenterView.bounds.size.width, self.zxCenterView.bounds.size.height);
+            self.zxCenterView.frame = CGRectMake(leftViewLocalX - self.zxCenterView.bounds.size.width, viewY, self.zxCenterView.bounds.size.width, self.zxCenterView.bounds.size.height);
             
             //交换中试图到左视图
             self.zxLeftView = self.zxCenterView;
