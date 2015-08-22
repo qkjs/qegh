@@ -200,7 +200,7 @@
 //随机生成一个view的位置
 - (CGRect) zxInitTheView{
     
-    NSInteger cW = screenW - leftViewLocalX - screenW * 0.8;
+    NSInteger cW = screenW - leftViewLocalX - screenW * (0.8 + self.zxScoreLab.text.intValue * 0.01);
     CGFloat w =  (arc4random() % cW) + 20;
     
     NSInteger cX = screenW - leftViewLocalX - 20 - w;
