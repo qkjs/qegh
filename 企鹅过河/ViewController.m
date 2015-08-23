@@ -167,10 +167,7 @@
 #pragma mark - 初始化
 
 - (void) zxInitTheGame{
-    if (self.zxCenterView) {
-        self.zxCenterView.backgroundColor = [UIColor clearColor];
-        self.zxCenterView = nil;
-    }
+
     self.touchEnabled  = YES;
     [self.zxRePlayButton setHidden:YES];
     self.zxScoreLab.text = @"0";
@@ -311,6 +308,7 @@
             self.zxCenterView.frame = CGRectMake(leftViewLocalX - self.zxCenterView.bounds.size.width, viewY, self.zxCenterView.bounds.size.width, self.zxCenterView.bounds.size.height);
             
             //交换中试图到左视图
+            self.zxLeftView = nil;
             self.zxLeftView = self.zxCenterView;
             self.zxCenterView = self.zxRightView;
             
