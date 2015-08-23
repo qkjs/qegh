@@ -129,8 +129,9 @@
 
 - (UILabel *) zxScoreLab{
     if (!_zxScoreLab) {
-        _zxScoreLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 60, screenW, 60)];
+        _zxScoreLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 90, screenW, 60)];
         _zxScoreLab.textAlignment = NSTextAlignmentCenter;
+        _zxScoreLab.font = [UIFont systemFontOfSize:19.0f];
         _zxScoreLab.textColor = [UIColor blackColor];
         _zxScoreLab.numberOfLines = 0;
         _zxScoreLab.text = @"0";
@@ -213,20 +214,20 @@
 - (void) zxWoodChangeToLong{
     CGFloat changeWood = 0.8;
     
-    CGFloat offSiteH = screenW - 40;
+//    CGFloat offSiteH = screenW - 40;
     
     CGFloat x = self.zxWoodView.frame.origin.x;
     CGFloat y = self.zxWoodView.frame.origin.y - changeWood;
     CGFloat w = self.zxWoodView.frame.size.width;
     CGFloat h = self.zxWoodView.frame.size.height + changeWood;
     
-    if (h > offSiteH){
-        h = h - offSiteH + 4;
-        y =  viewY - 4;
+    
+    NSLog(@"%f", self.zxWoodView.frame.origin.y);
+    if (self.zxWoodView.frame.origin.y > 64){
+        self.zxWoodView.frame = CGRectMake(x, y, w, h);
     }
     
     
-    self.zxWoodView.frame = CGRectMake(x, y, w, h);
     
 }
 
