@@ -240,6 +240,14 @@
     self.zxIcon.frame = CGRectMake(iconX, iconY, iconW, iconH);
 }
 
+/*!
+ *  <#Description#>
+ *
+ *  @param touches <#touches description#>
+ *  @param event   <#event description#>
+ *
+ *  @since <#version number#>
+ */
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
     self.zxFinger = self.zxFinger + 1;
@@ -250,7 +258,14 @@
         [self.zxTimer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
     }
 }
-
+/*!
+ *  <#Description#>
+ *
+ *  @param touches <#touches description#>
+ *  @param event   <#event description#>
+ *
+ *  @since <#version number#>
+ */
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     
     self.zxFinger --;
@@ -266,6 +281,11 @@
 }
 
 #pragma mark - 判断胜负
+/*!
+ *  <#Description#>
+ *
+ *  @since <#version number#>
+ */
 - (void) zxJudge{
     CGFloat winMaxX = CGRectGetMaxX(self.zxCenterView.frame);
     CGFloat winMinX = CGRectGetMinX(self.zxCenterView.frame);
