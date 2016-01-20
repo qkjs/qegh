@@ -191,6 +191,7 @@
     
     self.zxWoodView.frame = CGRectMake(woodX, woodY, woodW, woodH);
     
+    
     //初始化旋转View
     self.zxWoodView.transform = CGAffineTransformMake(1, 0, 0, 1, 0, 0);
 }
